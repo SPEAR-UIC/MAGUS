@@ -1,0 +1,29 @@
+name: coverity-python
+
+on:
+  push:
+    branches: [ '**' ]
+  pull_request:
+    branches: [ '**' ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ci-kw-linux
+    if: ${{ github.repository != 'intel/pcm' }}
+
+    steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
+      with:
+        egress-policy: audit
+
+    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
+      with:
+        submodules: recursive
+    - name: coverity-python
+      run: |
+        ci-cov-python.sh

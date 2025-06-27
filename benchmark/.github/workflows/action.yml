@@ -1,0 +1,56 @@
+name: action
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        cuda_versions: ['11.2.1', '11.2.2', '11.3.1']
+    steps:
+    - uses: Jimver/cuda-toolkit@v0.2.2
+      id: cuda-toolkit
+      with:
+        cuda: ${{ matrix.cuda_versions }}
+    - name: test nvcc command
+      run: nvcc -V
+    - name: show cmake version
+      run: cmake --version
+    - name: show gcc version
+      run: gcc --version
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: test build
+      run: |
+        cd tools
+        chmod +x github-action-setup.sh
+        ./github-action-setup.sh
+      shell: bash
+  build-apt:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install cuda with apt
+      run: |
+        sudo apt update
+        sudo apt install nvidia-cuda-toolkit
+      shell: bash
+    - name: test nvcc command
+      run: nvcc -V
+    - name: show cmake version
+      run: cmake --version
+    - name: show gcc version
+      run: gcc --version
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: test build
+      run: |
+        cd tools
+        chmod +x github-action-setup-old.sh
+        ./github-action-setup-old.sh
+      shell: bash
+      env:
+        CC:   gcc-8
+        CXX:  g++-8
