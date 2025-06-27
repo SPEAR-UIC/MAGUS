@@ -56,6 +56,6 @@ setup_benchamrk() {
     sudo ./setup.sh
 }
 
-
+install_dependence
 setup_pcm
 setup_benchmark
