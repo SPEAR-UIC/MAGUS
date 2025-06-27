@@ -51,7 +51,7 @@ setup_pcm() {
     sudo modprobe msr
 }
 
-setup_benchamrk() {
+setup_benchmark() {
     cd "./benchmark/"
     sudo ./setup.sh
 }
