@@ -1,1 +1,0 @@
-../../../cmake/Modules/LAMMPSInterfacePlugin.cmake

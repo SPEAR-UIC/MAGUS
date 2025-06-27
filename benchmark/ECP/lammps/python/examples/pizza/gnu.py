@@ -1,1 +1,0 @@
-../../../tools/python/pizza/gnu.py

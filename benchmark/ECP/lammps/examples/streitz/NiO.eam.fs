@@ -1,1 +1,0 @@
-../../potentials/NiO.eam.fs
