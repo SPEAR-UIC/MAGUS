@@ -1,3 +1,5 @@
+# Minimizing Power Waste in Heterogenous Computing via Adaptive Uncore Scaling
+
 ## Setup environment
 ./setup.sh
 
@@ -8,3 +10,9 @@ sudo ./src/build/bin/pcm-memory 0.1 --uncore_0 0.8 --uncore_1 0.8 --dynamic_ufs_
 
 ## Run application for example
 ./raytracing --passes 1 -s 4
+
+
+## Result Reproducing
+./start_uncore_fs.sh 
+reuslts are saved in ./GPGPU/data
+use uncore_fs.ipynb to plot
