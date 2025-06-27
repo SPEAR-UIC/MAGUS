@@ -19,4 +19,4 @@ use uncore_fs.ipynb to plot
 
 ## Note
 Please change hard-coded dir path to your own path. 
-i.e., in pcm-memory.c, start_uncore_fs.sh, exp_power_motif.py
+i.e., in pcm-memory.c, start_uncore_fs.sh, exp_power_motif.py, uncore_fs.ipynb
