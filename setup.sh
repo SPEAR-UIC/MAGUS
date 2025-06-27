@@ -58,4 +58,4 @@ setup_benchamrk() {
 
 
 setup_pcm
-setup_altis
+setup_benchmark
