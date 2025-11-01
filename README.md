@@ -1,4 +1,3 @@
-# Minimizing Power Waste in Heterogenous Computing via Adaptive Uncore Scaling
 
 ## Setup environment
 ./setup.sh
