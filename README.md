@@ -16,3 +16,11 @@ Zhong Zheng, Seyfal Sultanov, Michael E. Papka, and Zhiling Lan. 2025. Minimizin
 Scaling. In The International Conference for High Performance Computing,
 Networking, Storage and Analysis (SC ’25), November 16–21, 2025, St Louis,
 MO, USA. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/3712285.3759879
+
+@inproceedings{zheng2025minimizing,
+  title={Minimizing Power Waste in Heterogenous Computing via Adaptive Uncore Scaling},
+  author={Zheng, Zhong and Sultanov, Seyfal and Papka, Michael and Lan, Zhiling},
+  booktitle={Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages={505--518},
+  year={2025}
+}
